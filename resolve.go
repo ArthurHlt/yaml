@@ -82,7 +82,7 @@ func resolvableTag(tag string) bool {
 
 func resolve(tag string, in string) (rtag string, out interface{}) {
 	if !resolvableTag(tag) {
-		return tag, in
+		return tag, tag + " " + in
 	}
 
 	defer func() {
